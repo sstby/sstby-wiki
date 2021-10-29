@@ -36,3 +36,25 @@ textarea {
 .sidebar h2 {
     margin-top: 5px;
 }
+form{
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    margin-bottom: 0;
+}
+
+form input[type="submit"]{
+    width: 100px;
+}
+#id_form_title{
+    width: 250px;
+    margin-bottom: 10px;
+}
+#id_form_body{
+    height: 500px;
+    width: 1000px;
+    margin-bottom: 10px;
+}
+
+

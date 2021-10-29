@@ -13,6 +13,11 @@ def list_entries():
                 for filename in filenames if filename.endswith(".md")))
 
 
+def to_lower_case(list):
+    for i in range(len(list)):
+        list[i] = list[i].lower()
+    return list
+
 def save_entry(title, content):
     """
     Saves an encyclopedia entry, given its title and Markdown
