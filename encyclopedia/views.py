@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http.response import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django import forms
-import markdown
+import markdown2
 import random
 from . import util
 
@@ -20,7 +20,7 @@ def page(request, title):
     if title.lower() in util.to_lower_case(util.list_entries()):
         return render(request, "encyclopedia/pages.html", {
             "title": title,
-            "pbody": markdown.markdown(util.get_entry(title))
+            "pbody": markdown2.markdown(util.get_entry(title))
         })
     else:
         return render(request, "encyclopedia/errorpage.html", {
